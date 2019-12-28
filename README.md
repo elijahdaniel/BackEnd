@@ -162,7 +162,7 @@ _HTTP Method:_ **[GET]**
 
 ##### 404 (Not Found)
 
-> If users are not found, the endpoint will return an HTTP response with a status code `404`.
+> If user is not found, the endpoint will return an HTTP response with a status code `404`.
 
 ##### 401 (Unauthorized)
 
@@ -354,3 +354,11 @@ _HTTP Method:_ **[DELETE]**
 ##### 500 (Internal Service Error)
 
 > If there is a server or database error, the endpoint will return an HTTP response with a status code of `500`.
+
+# <<<<<<< HEAD
+
+```
+
+```
+
+> > > > > > > 4c5d44a8c8328f6ec56faac08275d2cfaf2b751e
