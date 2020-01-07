@@ -10,7 +10,7 @@
 | PUT    | Update a recipe by ID      | `/chefs/recipes/:id` |
 | DELETE | Delete a recipe by ID      | `/chefs/recipes/:id` |
 
-Register || returns new :id created
+## Register New Chef
 
 ```
 {
@@ -22,7 +22,20 @@ Register || returns new :id created
 }
 ```
 
-Login || "message": "Welcome johnny5!",
+### Chefs Table
+
+| Key             | Type   | Required |
+| --------------- | ------ | -------- |
+| `first_name`    | string | Yes      |
+| `last_name`     | string | Yes      |
+| `location`      | string | No       |
+| `contact`       | string | No       |
+| `username`      | string | Yes      |
+| `password`      | string | Yes      |
+| `email_address` | string | Yes      |
+| `avatar_url`    | string | no       |
+
+## Login
 
 ```
 {
@@ -31,7 +44,12 @@ Login || "message": "Welcome johnny5!",
 }
 ```
 
-Create New Recipe || "message": "recipe created"
+| Key        | Type   | Required |
+| ---------- | ------ | -------- |
+| `username` | string | Yes      |
+| `password` | string | Yes      |
+
+## Create Recipe
 
 ```
 {
@@ -43,3 +61,20 @@ Create New Recipe || "message": "recipe created"
   "pic_url": "asdf.png"
 }
 ```
+
+### Recipe Table
+
+| Key            | Type   | Required |
+| -------------- | ------ | -------- |
+| `title`        | string | Yes      |
+| `description`  | string | No       |
+| `instructions` | string | Yes      |
+| `meal_type`    | string | No       |
+| `chef_id`      | string | Yes      |
+| `pic_url`      | string | No       |
+
+### Ingredients Table
+
+| Key               | Type   | Required |
+| ----------------- | ------ | -------- |
+| `ingredient_name` | string | Yes      |
