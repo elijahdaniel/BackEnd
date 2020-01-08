@@ -1,4 +1,5 @@
 require('./secrets')
+require('dotenv').config()
 
 module.exports = {
   development: {
@@ -38,8 +39,12 @@ module.exports = {
     }
   },
   production: {
-    client: 'pg',
+    client: 'pg', // yarn add pg
     connection: process.env.DATABASE_URL + `?ssl=true`,
+    pool: {
+      min: 2,
+      max: 10
+    },
     migrations: {
       directory: './database/migrations'
     },
