@@ -16,15 +16,6 @@ function generateToken(user) {
   return jwt.sign(payload, secrets.jwtSecret, options)
 }
 
-// for /refresh
-
-router.get('/refresh', restrict, (req, res) => {
-  Users.findBy(req.user.username).then(user => {
-    const token = generateToken(user)
-    res.status(200).json({ token })
-  })
-}) //endpoint not tested
-
 // for endpoints beginning with /auth
 
 router.post('/register', (req, res) => {
@@ -38,7 +29,9 @@ router.post('/register', (req, res) => {
     })
     .catch(error => {
       console.log(error)
-      res.status(500).json(error)
+      res
+        .status(500)
+        .json({ error, message: 'internal error creating new user' })
     })
 }) //endpoint works
 
@@ -59,7 +52,12 @@ router.post('/login', (req, res) => {
     })
     .catch(error => {
       console.log(error)
-      res.status(500).json(error)
+      res
+        .status(500)
+        .json({
+          error,
+          errorMessage: 'internal error logging you in. Please try again.'
+        })
     })
 }) //endpoint works
 
