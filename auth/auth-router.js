@@ -25,7 +25,7 @@ router.get('/refresh', restrict, (req, res) => {
   })
 }) //endpoint not tested
 
-// for endpoints beginning with /api/auth
+// for endpoints beginning with /auth
 
 router.post('/register', (req, res) => {
   let user = req.body
