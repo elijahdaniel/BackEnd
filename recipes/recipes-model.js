@@ -3,6 +3,7 @@ const db = require('../database/dbConfig.js')
 module.exports = {
   getRecipes,
   getIngredients,
+  getMeasurements,
   getById,
   add,
   update,
@@ -20,6 +21,10 @@ function getRecipes() {
       'r.meal_type',
       'r.pic_url'
     )
+}
+
+function getMeasurements() {
+  return db('measurement_recipe_ingredient')
 }
 
 function getIngredients() {

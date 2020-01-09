@@ -24,6 +24,16 @@ router.get('/ingredients', (req, res) => {
     })
 }) //endpoint works
 
+router.get('/measurement', (req, res) => {
+  Recipes.getMeasurements()
+    .then(meas => {
+      res.status(200).json(meas)
+    })
+    .catch(error => {
+      res.status(500)
+    })
+}) //endpoint works
+
 router.get('/:id', async (req, res) => {
   const { id } = req.params
 
