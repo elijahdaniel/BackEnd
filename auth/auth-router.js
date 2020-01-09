@@ -37,7 +37,7 @@ router.post('/register', (req, res) => {
 
 router.post('/login', (req, res) => {
   let { username, password } = req.body
-  console.log({ username, password })
+  console.log({ username, id, password })
   Users.findBy({ username })
     .first()
     .then(user => {
@@ -45,19 +45,21 @@ router.post('/login', (req, res) => {
         const token = generateToken(user)
         res
           .status(200)
-          .json({ message: `Welcome ${user.username}!`, token: token })
+          .json({
+            message: `Welcome ${user.username}!`,
+            token: token,
+            id: `${user.id}`
+          })
       } else {
         res.status(401).json({ message: 'Invalid Credentials' })
       }
     })
     .catch(error => {
       console.log(error)
-      res
-        .status(500)
-        .json({
-          error,
-          errorMessage: 'internal error logging you in. Please try again.'
-        })
+      res.status(500).json({
+        error,
+        errorMessage: 'internal error logging you in. Please try again.'
+      })
     })
 }) //endpoint works
 
