@@ -1,4 +1,3 @@
 module.exports = {
-  // makes port dynamic
-  port: process.env.PORT || 4000
+    port: process.env.PORT || 4000,
 }

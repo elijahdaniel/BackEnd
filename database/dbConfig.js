@@ -1,4 +1,5 @@
 const knex = require('knex')
+
 const secrets = require('../secrets.js')
 
 const environment = secrets.environment || 'development'
