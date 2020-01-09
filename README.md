@@ -7,6 +7,7 @@
 | POST   | Create a new recipe        | `/recipes`             |
 | GET    | Get all recipes entries    | `/recipes`             |
 | GET    | Get all ingredients        | `/recipes/ingredients` |
+| GET    | Get all measurements       | `/recipes/measurement` |
 | GET    | Get recipes by a chef's ID | `/chefs/:id/recipes`   |
 | PUT    | Update a recipe by ID      | `/chefs/recipes/:id`   |
 | DELETE | Delete a recipe by ID      | `/chefs/recipes/:id`   |
