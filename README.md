@@ -1,14 +1,15 @@
 # Chef Portfolio Back End
 
-| Method | Description                | Endpoint             |
-| ------ | -------------------------- | -------------------- |
-| POST   | Create a user account      | `/auth/register`     |
-| POST   | Login a user               | `/auth/login`        |
-| POST   | Create a new recipe        | `/recipes`           |
-| GET    | Get all recipes entries    | `/recipes`           |
-| GET    | Get recipes by a chef's ID | `/chefs/:id/recipes` |
-| PUT    | Update a recipe by ID      | `/chefs/recipes/:id` |
-| DELETE | Delete a recipe by ID      | `/chefs/recipes/:id` |
+| Method | Description                | Endpoint               |
+| ------ | -------------------------- | ---------------------- |
+| POST   | Create a user account      | `/auth/register`       |
+| POST   | Login a user               | `/auth/login`          |
+| POST   | Create a new recipe        | `/recipes`             |
+| GET    | Get all recipes entries    | `/recipes`             |
+| GET    | Get all ingredients        | `/recipes/ingredients` |
+| GET    | Get recipes by a chef's ID | `/chefs/:id/recipes`   |
+| PUT    | Update a recipe by ID      | `/chefs/recipes/:id`   |
+| DELETE | Delete a recipe by ID      | `/chefs/recipes/:id`   |
 
 ## Register New Chef
 
