@@ -14,6 +14,7 @@ function getRecipes() {
   return db('recipes as r')
     .join('chefs as c', 'c.id', 'r.chef_id')
     .select(
+      'r.chef_id',
       'c.avatar_url',
       'r.title',
       'r.description',

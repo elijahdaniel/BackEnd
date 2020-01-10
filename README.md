@@ -9,7 +9,7 @@
 | GET    | Get all ingredients        | `/recipes/ingredients` |
 | GET    | Get all measurements       | `/recipes/measurement` |
 | GET    | Get all registered chefs   | `/chefs`               |
-| GET    | Get registered chef my ID  | `/chefs/:id`           |
+| GET    | Get registered chef by ID  | `/chefs/:id`           |
 | GET    | Get recipes by a chef's ID | `/chefs/:id/recipes`   |
 | PUT    | Update a recipe by ID      | `/chefs/recipes/:id`   |
 | DELETE | Delete a recipe by ID      | `/chefs/recipes/:id`   |
