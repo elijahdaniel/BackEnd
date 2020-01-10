@@ -11,8 +11,10 @@
 | GET    | Get all registered chefs   | `/chefs`               |
 | GET    | Get registered chef by ID  | `/chefs/:id`           |
 | GET    | Get recipes by a chef's ID | `/chefs/:id/recipes`   |
-| PUT    | Update a recipe by ID      | `/chefs/recipes/:id`   |
-| DELETE | Delete a recipe by ID      | `/chefs/recipes/:id`   |
+| PUT    | Update a chef by ID        | `/chefs/:id`           |
+| PUT    | Update a recipe by ID      | `/recipes/:id`         |
+| DELETE | Delete a chef by ID        | `/recipes/:id`         |
+| DELETE | Delete a recipe by ID      | `/chefs/:id`           |
 
 ## Register New Chef
 
