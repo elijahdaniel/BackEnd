@@ -1,4 +1,4 @@
-Base URL: `https://cpbackend.herokuapp.com/`
+Deployed URL: `https://cpbackend.herokuapp.com/`
 
 
 # Chef Portfolio Back End
